@@ -1,0 +1,201 @@
+/* General container for the experience section */
+.work-experience {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background-color: rgba(25, 143, 217, 0.1);
+  color: #198FD9;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px 15px 6px 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #e7ecef;
+}
+
+/* Experience content styling */
+.experience-content {
+  margin-top: 10px;
+}
+
+.experience-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Role, Edit, and Delete buttons alignment */
+.experience-role {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.edit-btn {
+  background-color: #fff;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 3px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 5px; /* Add spacing between role and edit button */
+}
+
+.edit-btn:hover {
+  background-color: #f7eded;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  color: red; /* Red color for the delete icon */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: darkred; /* Darker red on hover */
+}
+
+.experience-company,
+.experience-duration {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.top-projects {
+  margin-top: 6px;
+}
+
+.top-projects p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tag {
+  display: inline-block;
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #666;
+  border: 1px solid #999;
+}
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content styling */
+.modal-content {
+  background: white;
+  width: 50%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Modal form styling */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Buttons in the modal */
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #fff;
+  color: #7F7F7F;
+  border: 1px solid;
+  padding: 8px 12px;
+  border-radius: 6px 20px 6px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}
+

@@ -1,0 +1,130 @@
+.career-container {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.update-btn {
+  background-color: rgba(25, 143, 217, 0.1);
+  color: #198FD9;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px 15px 6px 6px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #e7ecef;
+}
+
+.career-content {
+  margin-top: 10px;
+}
+
+.position-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.career-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  width: 50%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #fff;
+  color: #7F7F7F;
+  border: 1px solid;
+  padding: 8px 12px;
+  border-radius: 6px 20px 6px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background-color: #fceded;
+}
+
+.save-btn {
+  background-color: #F9444A;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px 20px 6px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-btn:hover {
+  background-color: #be0d12;
+}

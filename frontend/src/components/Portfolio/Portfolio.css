@@ -1,0 +1,218 @@
+/* .portfolio-card {
+    width: 400px;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .update-btn {
+    background-color: #e6f2ff;
+    color: #007bff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .update-btn:hover {
+    background-color: #d4e6ff;
+  }
+  
+  .portfolio-content {
+    margin-top: 10px;
+  }
+  
+  .portfolio-item {
+    margin-bottom: 8px;
+  }
+  
+  .portfolio-item strong {
+    display: block;
+    font-size: 14px;
+  }
+  
+  .portfolio-item a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .portfolio-item a:hover {
+    text-decoration: underline;
+  }
+   */
+
+
+
+
+
+
+
+
+   /* General container for the portfolio section */
+.portfolio-card {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Header styling */
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.update-btn {
+  background-color: rgba(25, 143, 217, 0.1);
+  color: #198FD9;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px 15px 6px 6px;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background-color: #e7ecef;
+}
+
+/* Portfolio content styling */
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-item strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.portfolio-item a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.portfolio-item a:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+/* Modal overlay styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content styling */
+.modal {
+  background: white;
+  width: 50%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* Buttons in the modal */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  background-color: #fff;
+  color: #7F7F7F;
+  border: 1px solid;
+  padding: 8px 12px;
+  border-radius: 6px 20px 6px 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background-color: #ccc;
+}
+
