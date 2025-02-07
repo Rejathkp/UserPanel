@@ -103,15 +103,15 @@
   align-items: center;
   border: 1px solid #d1d5db;
   border-radius: 8px 20px 8px 8px;
-  overflow: hidden; /* Ensures no overflow from rounded corners */
+  overflow: hidden;
   margin-right: 15px;
 }
 
 .newsletter input {
   padding: 8px;
   width: 100%;
-  border: none; /* Remove the default border */
-  outline: none; /* Remove focus outline */
+  border: none;
+  outline: none;
 }
 
 .newsletter button {
