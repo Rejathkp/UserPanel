@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="navbar-right">
         <div className="user-profile">
           <div className="circle">A</div>
-          <span className="username">John Doe</span>
+          <span className="username">Abhishek</span>
         </div>
       </div>
     </nav>
