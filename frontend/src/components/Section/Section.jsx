@@ -5,7 +5,7 @@ import UserInfo from "../UserInfo/UserInfo.jsx";
 import Education from "../Education/Education.jsx";
 import Career from "../Career/Career.jsx";
 import Skills from "../Skills/Skills.jsx";
-// import Resume from "../Resume/Resume.jsx";
+import Resume from "../Resume/Resume.jsx";
 import Portfolio from "../Portfolio/Porfolio.jsx";
 import Experience from "../Experience/Experience.jsx";
 import Preference from "../Preferences/Preferences.jsx";
@@ -26,8 +26,8 @@ const Section = () => {
         <br />
         <Skills />
         <br />
-        {/* <Resume />
-        <br /> */}
+        <Resume />
+        <br />
         <Portfolio />
         <br />
         <Experience />
