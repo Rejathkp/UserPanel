@@ -139,8 +139,10 @@ export default function Footer() {
           <h3 className="mt-6">Newsletter</h3>
           <p>Never miss a beat with our newsletter updates!</p>
           <div className="newsletter">
-            <input type="email" placeholder="Enter your email address" />
-            <button>Subscribe</button>
+            <div className="newsletter-input-container">
+              <input type="email" placeholder="Enter your email address" />
+              <button>Subscribe</button>
+            </div>
           </div>
         </div>
       </div>
@@ -150,7 +152,9 @@ export default function Footer() {
           <p>© 2024 ASAP Kerala. All Rights Reserved</p>
           <p>Powered by SRV InfoTech</p>
         </div>
+
         <div className="social-icons">
+          <p>Stay Connected with Us</p>
           <FaFacebookF />
           <FaInstagram />
           <FaXTwitter />

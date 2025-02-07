@@ -98,19 +98,28 @@
   margin-top: 20px;
 }
 
+.newsletter-input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px 20px 8px 8px;
+  overflow: hidden; /* Ensures no overflow from rounded corners */
+  margin-right: 15px;
+}
+
 .newsletter input {
   padding: 8px;
-  border: 1px solid #d1d5db;
-  width: 70%;
-  border-radius: 4px 0 0 4px;
+  width: 100%;
+  border: none; /* Remove the default border */
+  outline: none; /* Remove focus outline */
 }
 
 .newsletter button {
-  background-color: #10b981;
+  background-color: #5cb01a;
   color: white;
   border: none;
+  border-radius: 8px 20px 8px 8px;
   padding: 9px 15px;
-  border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
 
@@ -150,4 +159,9 @@
   justify-content: space-between;
   padding: 0px 90px 0px 18px;
   margin-top: 40px;
+}
+
+.social-icons p {
+  font-size: 16px;
+    color: #6b7280;
 }
