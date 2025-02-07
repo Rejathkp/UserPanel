@@ -4,7 +4,7 @@ import Skill from "../models/skillModel.js";
 export const getSkills = async (req, res) => {
   try {
     const skills = await Skill.find();
-    res.status(200).json(skills.map((skill) => skill.skill)); // Return only the skill names
+    res.status(200).json(skills.map((skill) => skill.skill));
   } catch (error) {
     res.status(500).json({ message: "Server error", error });
   }
@@ -15,13 +15,11 @@ export const addSkill = async (req, res) => {
   const { skill } = req.body;
 
   try {
-    // Check if the skill already exists
     const existingSkill = await Skill.findOne({ skill });
     if (existingSkill) {
       return res.status(400).json({ message: "Skill already exists" });
     }
-
-    // Create a new skill
+    
     const newSkill = new Skill({ skill });
     await newSkill.save();
 

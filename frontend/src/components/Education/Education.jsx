@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { FaTrash } from "react-icons/fa"; // Import the trash icon
-import "./Education.css"; // Import the CSS file
+import { FaTrash } from "react-icons/fa";
+import "./Education.css"; 
 
 const Education = () => {
-  const [educationData, setEducationData] = useState([]); // State to store education data
-  const [isAddModalOpen, setIsAddModalOpen] = useState(false); // State for Add Modal
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false); // State for Edit Modal
+  const [educationData, setEducationData] = useState([]); 
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false); 
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false); 
   const [formData, setFormData] = useState({
     degree: "",
     institution: "",
     year: "",
     state: "",
     district: "",
-  }); // State to store form data
-  const [editId, setEditId] = useState(null); // Track the ID of the item being edited
+  }); 
+  const [editId, setEditId] = useState(null); 
 
-  // Fetch education data from the backend on component mount
   useEffect(() => {
     fetchEducationData();
   }, []);
@@ -30,12 +29,10 @@ const Education = () => {
     }
   };
 
-  // Function to handle opening the Add Modal
   const handleAddClick = () => {
     setIsAddModalOpen(true);
   };
 
-  // Function to handle opening the Edit Modal
   const handleEditClick = (id) => {
     const selectedEntry = educationData.find((edu) => edu._id === id);
     const [institution, district, state] = selectedEntry.institution.split(", ");
@@ -50,7 +47,6 @@ const Education = () => {
     setIsEditModalOpen(true);
   };
 
-  // Function to handle closing the modals
   const handleCloseModal = () => {
     setIsAddModalOpen(false);
     setIsEditModalOpen(false);
@@ -63,13 +59,11 @@ const Education = () => {
     });
   };
 
-  // Function to handle input changes in the form
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Function to handle saving a new education entry
   const handleSaveChangesForAdd = async () => {
     const combinedInstitution = `${formData.institution}, ${formData.district}, ${formData.state}`;
     const newEntry = {
@@ -79,14 +73,13 @@ const Education = () => {
     };
     try {
       await axios.post("http://localhost:4000/api/education", newEntry);
-      fetchEducationData(); // Refresh the data after adding
+      fetchEducationData(); 
       handleCloseModal();
     } catch (error) {
       console.error("Error adding education entry:", error);
     }
   };
 
-  // Function to handle saving changes for an existing education entry
   const handleSaveChangesForEdit = async () => {
     const combinedInstitution = `${formData.institution}, ${formData.district}, ${formData.state}`;
     const updatedEntry = {
@@ -96,18 +89,17 @@ const Education = () => {
     };
     try {
       await axios.put(`http://localhost:4000/api/education/${editId}`, updatedEntry);
-      fetchEducationData(); // Refresh the data after updating
+      fetchEducationData(); 
       handleCloseModal();
     } catch (error) {
       console.error("Error updating education entry:", error);
     }
   };
 
-  // Function to handle deleting an education entry
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:4000/api/education/${id}`);
-      fetchEducationData(); // Refresh the data after deleting
+      fetchEducationData();
     } catch (error) {
       console.error("Error deleting education entry:", error);
     }
@@ -138,7 +130,6 @@ const Education = () => {
           </div>
         ))}
       </div>
-      {/* Add Modal */}
       {isAddModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -210,7 +201,6 @@ const Education = () => {
           </div>
         </div>
       )}
-      {/* Edit Modal */}
       {isEditModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">

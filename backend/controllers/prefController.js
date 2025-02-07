@@ -14,16 +14,14 @@ export const getPreference = async (req, res) => {
 
 // Add or update preference
 export const addOrUpdatePreference = async (req, res) => {
-    const { preference } = req.body; // Extract preference text from request body
+    const { preference } = req.body;
     try {
-      let pref = await Preference.findOne(); // Check if a preference already exists
+      let pref = await Preference.findOne();
       if (!pref) {
-        // If no preference exists, create a new one
         pref = new Preference({ preference });
         await pref.save();
         return res.status(201).json({ message: "Preference added successfully", preference: pref.preference });
       }
-      // If a preference exists, update it
       pref.preference = preference;
       await pref.save();
       res.status(200).json({ message: "Preference updated successfully", preference: pref.preference });

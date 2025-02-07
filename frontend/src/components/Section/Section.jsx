@@ -1,6 +1,6 @@
 import React from "react";
-import Profile from "../Profile/Profile.jsx"; // Import the ProfileSection component
-import "./Section.css"; // External CSS for this component
+import Profile from "../Profile/Profile.jsx"; 
+import "./Section.css"; 
 import UserInfo from "../UserInfo/UserInfo.jsx";
 import Education from "../Education/Education.jsx";
 import Career from "../Career/Career.jsx";
@@ -13,10 +13,8 @@ import Preference from "../Preferences/Preferences.jsx";
 const Section = () => {
   return (
     <div className="sections-container">
-      {/* First Section: Profile Section */}
       <Profile />
 
-      {/* Second Section: Student Details */}
       <div className="section student-details">
         <UserInfo />
         <div>
@@ -37,7 +35,6 @@ const Section = () => {
         <Preference />
       </div>
 
-      {/* Third Section: Basic Information */}
       <div className="section basic-information">
         <h2 className="basic-info-heading">Basic Information</h2>
         <ul className="basic-info-list">

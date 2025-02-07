@@ -1,10 +1,9 @@
 import React from 'react';
-import './Navbar.css'; // External CSS file
+import './Navbar.css';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Left Side: Logo and Menu Items */}
       <div className="navbar-left">
         <div className="logo">
             <img src="  \src\assets\logo.svg" alt="" />
@@ -18,7 +17,6 @@ const Navbar = () => {
         </ul>
       </div>
 
-      {/* Right Side: User Profile */}
       <div className="navbar-right">
         <div className="user-profile">
           <div className="circle">A</div>

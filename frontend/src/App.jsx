@@ -9,7 +9,6 @@ function App() {
     <>
       <div>
         <Navbar />
-        {/* <Profile /> */}
         <Section />
         <Footer />
       </div>

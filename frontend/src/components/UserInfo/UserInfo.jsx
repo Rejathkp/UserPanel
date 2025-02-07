@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios"; // Import Axios
+import axios from "axios";
 import "./UserInfo.css";
 
 const UserInfo = () => {
-  const [userData, setUserData] = useState(null); // Store user data from backend
+  const [userData, setUserData] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({});
 
-  // Fetch dummy user data from backend using Axios
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get("http://localhost:4000/api/users");
         setUserData(response.data);
-        setFormData(response.data); // Initialize form data with fetched data
+        setFormData(response.data); 
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
@@ -38,18 +37,17 @@ const UserInfo = () => {
     setFormData({ ...formData, gender });
   };
 
-  // Save changes using Axios
   const handleSaveChanges = async () => {
     try {
       const response = await axios.put("/api/users", formData);
-      setUserData(response.data); // Update local state with saved data
+      setUserData(response.data); 
       setIsModalOpen(false);
     } catch (error) {
       console.error("Error saving changes:", error);
     }
   };
 
-  if (!userData) return <p>Loading...</p>; // Show loading state
+  if (!userData) return <p>Loading...</p>;
 
   return (
     <div className="info-container">
@@ -60,7 +58,6 @@ const UserInfo = () => {
         </button>
       </div>
       <div className="info-card">
-        {/* Full Name, DOB, and Gender in one line */}
         <div className="info-row">
           <div className="info-group">
             <p>
@@ -90,7 +87,6 @@ const UserInfo = () => {
           </div>
         </div>
 
-        {/* Mobile and Email in one line */}
         <div className="info-row">
           <div className="info-group">
             <p>
@@ -106,7 +102,6 @@ const UserInfo = () => {
           </div>
         </div>
 
-        {/* Aadhar */}
         <div className="info-row">
           <div className="info-group">
             <p>
@@ -116,7 +111,6 @@ const UserInfo = () => {
           </div>
         </div>
 
-        {/* Address */}
         <div className="info-row">
           <div className="info-group">
             <p>
@@ -130,7 +124,6 @@ const UserInfo = () => {
         </div>
       </div>
 
-      {/* Modal */}
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
@@ -139,7 +132,6 @@ const UserInfo = () => {
             </span>
             <h3>Basic Information</h3>
             <div className="user-modal-form">
-              {/* First Name and Last Name */}
               <div className="form-row">
                 <div className="form-group">
                   <label>First Name</label>
@@ -161,7 +153,6 @@ const UserInfo = () => {
                 </div>
               </div>
 
-              {/* DOB and Gender */}
               <div className="form-row">
                 <div className="form-group">
                   <label>Date of Birth</label>
@@ -199,7 +190,6 @@ const UserInfo = () => {
                 </div>
               </div>
 
-              {/* Mobile and Email */}
               <div className="form-row">
                 <div className="form-group">
                   <label>Mobile</label>
@@ -221,7 +211,6 @@ const UserInfo = () => {
                 </div>
               </div>
 
-              {/* Aadhar and Address */}
               <div className="form-row">
                 <div className="form-group">
                   <label>Aadhar</label>
@@ -243,7 +232,6 @@ const UserInfo = () => {
                 </div>
               </div>
 
-              {/* State, District, and Pincode */}
               <div className="form-row">
                 <div className="form-group">
                   <label>State</label>
@@ -280,7 +268,6 @@ const UserInfo = () => {
                 </div>
               </div>
 
-              {/* Parent/Guardian Details */}
               <div className="form-row">
                 <div className="form-group">
                   <label>Parent/Guardian Name</label>
@@ -302,7 +289,6 @@ const UserInfo = () => {
                 </div>
               </div>
 
-              {/* Modal Buttons */}
               <div className="modal-buttons">
                 <button className="cancel-btn" onClick={handleCloseModal}>
                   Cancel

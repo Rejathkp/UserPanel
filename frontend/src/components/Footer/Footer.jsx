@@ -6,20 +6,18 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa6";
-import "./Footer.css"; // Import the CSS file
+import "./Footer.css";
 
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Left Section (70%) */}
         <div className="footer-left">
           <div className="logo-wrapper">
             <div className="logo">
               <img src="\src\assets\logo.svg" alt="" />
             </div>
             <div>
-              {/* Quick Links */}
               <h3>Quick Links</h3>
               <br />
               <div className="quick-links">
@@ -47,7 +45,6 @@ export default function Footer() {
           </div>
 
           <div className="footer-sections">
-            {/* Internship & Jobs */}
             <div>
               <h3>Internship by Stream</h3>
               <ul>
@@ -118,7 +115,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right Section (30%) */}
         <div className="footer-right">
           <h3>Are you having any issues?</h3>
           <div className="support-info">
@@ -143,7 +139,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Social Media Links & Copyright */}
       <div className="bottom">
         <div className="footer-bottom">
           <p>© 2024 ASAP Kerala. All Rights Reserved</p>

@@ -15,13 +15,11 @@ export const addPortfolioLink = async (req, res) => {
   const { title, url } = req.body;
 
   try {
-    // Check if the link already exists
     const existingLink = await Portfolio.findOne({ title });
     if (existingLink) {
       return res.status(400).json({ message: "Portfolio link already exists" });
     }
 
-    // Create a new portfolio link
     const newLink = new Portfolio({ title, url });
     await newLink.save();
 
