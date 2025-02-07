@@ -15,6 +15,24 @@
   width: 70%;
 }
 
+.footer-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 10px; 
+}
+
+.footer-icon img {
+  width: 20px; 
+  height: 20px;
+}
+
+.footer-icon p {
+  margin: 0; 
+  font-size: 14px;
+  color: #4b5563;
+}
+
 .quick-links {
   display: flex;
   flex-wrap: wrap;

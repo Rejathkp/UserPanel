@@ -118,12 +118,18 @@ export default function Footer() {
         <div className="footer-right">
           <h3>Are you having any issues?</h3>
           <div className="support-info">
-            <p>
-              📞 Call Support: <strong>+91 9495999623</strong>
-            </p>
-            <p>
-              📧 Email Support: <strong>info@asapkerala.gov.in</strong>
-            </p>
+            <div className="footer-icon">
+              <img src="src\assets\headset_mic.png" alt="" />
+              <p>
+                Call Support: <strong>+91 9495999623</strong>
+              </p>
+            </div>
+            <div className="footer-icon">
+              <img src="src\assets\mark_email_unread.png" alt="" />
+              <p>
+                Email Support: <strong>info@asapkerala.gov.in</strong>
+              </p>
+            </div>
           </div>
           <h3 className="mt-6">ASAP Kerala</h3>
           <p className="mt-2 text-sm">

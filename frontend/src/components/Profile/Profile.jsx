@@ -1,5 +1,11 @@
 import React from 'react';
 import './Profile.css';
+import { MdOutlineEmail, MdOutlineLocalPhone } from "react-icons/md";
+import { CiEdit } from "react-icons/ci";
+import { TbUserSquare } from "react-icons/tb";
+import { TfiMedall } from "react-icons/tfi";
+import { RiFileEditLine } from "react-icons/ri";
+
 
 const Profile = () => {
   return (
@@ -18,31 +24,31 @@ const Profile = () => {
 
       <div className="contact-info">
         <div className="info-item">
-          <span className="icon">📞</span>
+          <MdOutlineLocalPhone className='icon'/>
           <span className="text">+123 456 7890</span>
         </div>
         <div className="info-item">
-          <span className="icon">✉️</span>
-          <span className="text">johndoe@example.com</span>
+        <MdOutlineEmail className='icon'/>
+        <span className="text">johndoe@example.com</span>
         </div>
         <div className="info-item">
-          <span className="icon">✏️</span>
-          <span className="text">Edit/Update Profile</span>
+        <CiEdit className='icon'/>
+        <span className="text">Edit/Update Profile</span>
         </div>
       </div>
 
       <div className="profile-links">
         <div className="link-item">
-          <span className="icon">👤</span>
-          <span className="text">My Profile</span>
+        <TbUserSquare className='icon'/>
+        <span className="text">My Profile</span>
         </div>
         <div className="link-item">
-          <span className="icon">💳</span>
-          <span className="text">Payments</span>
+        <TfiMedall className='icon'/>
+        <span className="text">Payments</span>
         </div>
         <div className="link-item">
-          <span className="icon">📄</span>
-          <span className="text">Application Status</span>
+        <RiFileEditLine className='icon'/>
+        <span className="text">Application Status</span>
         </div>
         <div className='link-item'>          
           <button className="logout-button">Logout</button>
