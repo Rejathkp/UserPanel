@@ -9,7 +9,7 @@ const Preference = () => {
   useEffect(() => {
     const fetchPreference = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/preference");
+        const response = await axios.get("https://userpanel-backend.onrender.com/api/preference");
         setPreference(response.data.preference);
       } catch (error) {
         console.error("Error fetching preference:", error);
@@ -31,7 +31,7 @@ const Preference = () => {
         return;
       }
 
-      const response = await axios.post("http://localhost:4000/api/preference", {
+      const response = await axios.post("https://userpanel-backend.onrender.com/api/preference", {
         preference: updatedText,
       });
 
