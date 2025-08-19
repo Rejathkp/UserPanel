@@ -10,7 +10,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchPortfolioLinks = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/portfolio");
+        const response = await axios.get("https://userpanel-backend.onrender.com/api/portfolio");
         setLinks(response.data);
       } catch (error) {
         console.error("Error fetching portfolio links:", error);
@@ -31,7 +31,7 @@ const Portfolio = () => {
   const handleAddLink = async () => {
     if (newLink.title.trim() !== "" && newLink.url.trim() !== "") {
       try {
-        const response = await axios.post("http://localhost:4000/api/portfolio", newLink);
+        const response = await axios.post("https://userpanel-backend.onrender.com/api/portfolio", newLink);
         setLinks([...links, response.data.link]); 
         closeModal();
       } catch (error) {
@@ -42,7 +42,7 @@ const Portfolio = () => {
 
   const handleDeleteLink = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/portfolio/${id}`);
+      await axios.delete(`https://userpanel-backend.onrender.com/api/portfolio/${id}`);
       setLinks(links.filter((link) => link._id !== id)); 
     } catch (error) {
       console.error("Error deleting portfolio link:", error);
