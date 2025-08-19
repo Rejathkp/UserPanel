@@ -18,7 +18,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/experiences");
+        const response = await axios.get("https://userpanel-backend.onrender.com/experiences");
         setExperiences(response.data);
       } catch (error) {
         console.error("Error fetching experiences:", error);
@@ -49,7 +49,7 @@ const Experience = () => {
   const handleAddExperience = async () => {
     if (newExperience.role.trim() !== "" && newExperience.company.trim() !== "") {
       try {
-        const response = await axios.post("http://localhost:4000/api/experiences", newExperience);
+        const response = await axios.post("https://userpanel-backend.onrender.com/api/experiences", newExperience);
         setExperiences([...experiences, response.data.experience]);
         closeAddModal();
       } catch (error) {
@@ -78,7 +78,7 @@ const Experience = () => {
 
   const handleDeleteExperience = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/experiences/${id}`);
+      await axios.delete(`https://userpanel-backend.onrender.com/experiences/${id}`);
       setExperiences(experiences.filter((exp) => exp._id !== id));
     } catch (error) {
       console.error("Error deleting experience:", error);
