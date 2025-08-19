@@ -22,7 +22,7 @@ const Education = () => {
 
   const fetchEducationData = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/education");
+      const response = await axios.get("https://userpanel-backend.onrender.com/api/education");
       setEducationData(response.data);
     } catch (error) {
       console.error("Error fetching education data:", error);
@@ -72,7 +72,7 @@ const Education = () => {
       year: formData.year,
     };
     try {
-      await axios.post("http://localhost:4000/api/education", newEntry);
+      await axios.post("https://userpanel-backend.onrender.com/api/education", newEntry);
       fetchEducationData(); 
       handleCloseModal();
     } catch (error) {
@@ -88,7 +88,7 @@ const Education = () => {
       year: formData.year,
     };
     try {
-      await axios.put(`http://localhost:4000/api/education/${editId}`, updatedEntry);
+      await axios.put(`https://userpanel-backend.onrender.com/api/education/${editId}`, updatedEntry);
       fetchEducationData(); 
       handleCloseModal();
     } catch (error) {
@@ -98,7 +98,7 @@ const Education = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/education/${id}`);
+      await axios.delete(`https://userpanel-backend.onrender.com/api/education/${id}`);
       fetchEducationData();
     } catch (error) {
       console.error("Error deleting education entry:", error);

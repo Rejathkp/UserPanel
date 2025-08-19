@@ -13,7 +13,7 @@ function Resume() {
 
   const fetchFiles = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/files');
+      const response = await axios.get('https://userpanel-backend.onrender.com/api/files');
       const pdf = response.data.find((file) => file.fileType === 'application/pdf');
       const video = response.data.find((file) => file.fileType.startsWith('video'));
       setPdfFile(pdf || null);
@@ -31,7 +31,7 @@ function Resume() {
     formData.append('file', file);
 
     try {
-      await axios.post('http://localhost:4000/api/upload', formData, {
+      await axios.post('https://userpanel-backend.onrender.com/api/upload', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       fetchFiles(); 
@@ -42,7 +42,7 @@ function Resume() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/files/${id}`);
+      await axios.delete(`https://userpanel-backend.onrender.com/api/files/${id}`);
       fetchFiles();
     } catch (error) {
       console.error('Error deleting file:', error);

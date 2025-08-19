@@ -17,7 +17,7 @@ const Career = () => {
   useEffect(() => {
     const fetchCareerObjective = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/career");
+        const response = await axios.get("https://userpanel-backend.onrender.com/api/career");
         setCareerObjective(response.data.objective); 
       } catch (error) {
         console.error("Error fetching career objective:", error);
@@ -28,7 +28,7 @@ const Career = () => {
 
   const handleSave = async (updatedText) => {
     try {
-      const response = await axios.post("http://localhost:4000/api/career", {
+      const response = await axios.post("https://userpanel-backend.onrender.com/api/career", {
         objective: updatedText,
       });
       setCareerObjective(response.data.career.objective);
