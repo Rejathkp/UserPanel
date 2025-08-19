@@ -10,7 +10,7 @@ const UserInfo = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/users");
+        const response = await axios.get("https://userpanel-backend.onrender.com/api/users");
         setUserData(response.data);
         setFormData(response.data); 
       } catch (error) {
