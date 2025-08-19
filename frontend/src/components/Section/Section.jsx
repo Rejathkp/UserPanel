@@ -9,6 +9,7 @@ import Resume from "../Resume/Resume.jsx";
 import Portfolio from "../Portfolio/Porfolio.jsx";
 import Experience from "../Experience/Experience.jsx";
 import Preference from "../Preferences/Preferences.jsx";
+import { assets } from "../../assets/assets.js";
 
 const Section = () => {
   return (
@@ -18,7 +19,7 @@ const Section = () => {
       <div className="section student-details">
         <UserInfo />
         <div>
-          <img src="\src\assets\Group 1539.svg" alt="" style={{ width:'100%', margin: "10px 0px"}}/>
+          <img src={assets.payment} alt="" style={{ width:'100%', margin: "10px 0px"}}/>
         </div>
         <Education />
         <br />

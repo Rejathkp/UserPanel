@@ -5,13 +5,14 @@ import { CiEdit } from "react-icons/ci";
 import { TbUserSquare } from "react-icons/tb";
 import { TfiMedall } from "react-icons/tfi";
 import { RiFileEditLine } from "react-icons/ri";
+import { assets } from '../../assets/assets';
 
 
 const Profile = () => {
   return (
     <div className="profile-section">
       <div className="profile-image">
-        <img src="\src\assets\image.png" alt="Profile" />
+        <img src={assets.profile_pic} alt="Profile" />
       </div>
       <div className="progress-bar">
         <div className="progress" style={{ width: '70%' }}></div>

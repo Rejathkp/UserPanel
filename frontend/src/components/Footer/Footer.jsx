@@ -7,6 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import "./Footer.css";
+import { assets } from "../../assets/assets";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
         <div className="footer-left">
           <div className="logo-wrapper">
             <div className="logo">
-              <img src="\src\assets\logo.svg" alt="" />
+              <img src={assets.logo} alt="" />
             </div>
             <div>
               <h3>Quick Links</h3>
@@ -119,13 +120,13 @@ export default function Footer() {
           <h3>Are you having any issues?</h3>
           <div className="support-info">
             <div className="footer-icon">
-              <img src="src\assets\headset_mic.png" alt="" />
+              <img src={assets.headset} alt="" />
               <p>
                 Call Support: <strong>+91 9495999623</strong>
               </p>
             </div>
             <div className="footer-icon">
-              <img src="src\assets\mark_email_unread.png" alt="" />
+              <img src={assets.mail} alt="" />
               <p>
                 Email Support: <strong>info@asapkerala.gov.in</strong>
               </p>
