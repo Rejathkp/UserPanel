@@ -10,7 +10,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/skills");
+        const response = await axios.get("https://userpanel-backend.onrender.com/api/skills");
         setSkills(response.data); 
       } catch (error) {
         console.error("Error fetching skills:", error);
@@ -31,7 +31,7 @@ const Skills = () => {
   const handleAddSkill = async () => {
     if (newSkill.trim() !== "") {
       try {
-        const response = await axios.post("http://localhost:4000/api/skills", { skill: newSkill.trim() });
+        const response = await axios.post("https://userpanel-backend.onrender.com/api/skills", { skill: newSkill.trim() });
         setSkills([...skills, response.data.skill]); 
         setNewSkill(""); 
         closeModal(); 
@@ -43,7 +43,7 @@ const Skills = () => {
 
   const handleDeleteSkill = async (skillToDelete) => {
     try {
-      await axios.delete(`http://localhost:4000/api/skills/${encodeURIComponent(skillToDelete)}`);
+      await axios.delete(`https://userpanel-backend.onrender.com/api/skills/${encodeURIComponent(skillToDelete)}`);
       setSkills(skills.filter((skill) => skill !== skillToDelete)); // Remove the skill from the list
     } catch (error) {
       console.error("Error deleting skill:", error);
