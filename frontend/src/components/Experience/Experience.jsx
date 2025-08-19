@@ -18,7 +18,7 @@ const Experience = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await axios.get("https://userpanel-backend.onrender.com/experiences");
+        const response = await axios.get("https://userpanel-backend.onrender.com/api/experiences");
         setExperiences(response.data);
       } catch (error) {
         console.error("Error fetching experiences:", error);
@@ -78,7 +78,7 @@ const Experience = () => {
 
   const handleDeleteExperience = async (id) => {
     try {
-      await axios.delete(`https://userpanel-backend.onrender.com/experiences/${id}`);
+      await axios.delete(`https://userpanel-backend.onrender.com/api/experiences/${id}`);
       setExperiences(experiences.filter((exp) => exp._id !== id));
     } catch (error) {
       console.error("Error deleting experience:", error);
